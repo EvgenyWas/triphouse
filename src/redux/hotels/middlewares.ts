@@ -1,14 +1,16 @@
 import ApiService from "../../API/ApiService";
-import { TAvailableHotelsParams } from "../../types/types";
+import store from "../../store/store";
+import { convertToParamsObject } from "../../utils/utils";
 import { actionSetSearch } from "../searchBar/actions";
-import {
-    actionGetAvailableHotelsFailed,
-    actionGetAvailableHotelsRequested,
-    actionGetAvailableHotelsSucceed,
-    actionGetPopularHotelsFailed,
-    actionGetPopularHotelsRequested,
-    actionGetPopularHotelsSucceed
-} from "./actions";
+import
+    {
+        actionGetAvailableHotelsFailed,
+        actionGetAvailableHotelsRequested,
+        actionGetAvailableHotelsSucceed,
+        actionGetPopularHotelsFailed,
+        actionGetPopularHotelsRequested,
+        actionGetPopularHotelsSucceed
+    } from "./actions";
 
 export const getPopularHotels = () => async (dispatch: any) => {
     dispatch(actionGetPopularHotelsRequested());
@@ -21,12 +23,13 @@ export const getPopularHotels = () => async (dispatch: any) => {
     }
 };
 
-export const getAvailableHotels = (search?: string, params?: TAvailableHotelsParams) => async (dispatch: any) => {
+export const getAvailableHotels = (search?: string) => async (dispatch: any) => {
     dispatch(actionSetSearch(search));
+    const { searchBar } = store.getState()
     dispatch(actionGetAvailableHotelsRequested());
 
     try {
-        const response = await ApiService.getAvailableHotels(params);
+        const response = await ApiService.getAvailableHotels(convertToParamsObject(searchBar));
         dispatch(actionGetAvailableHotelsSucceed(response.data));
     } catch (error: any) {
         dispatch(actionGetAvailableHotelsFailed(error));
