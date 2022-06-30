@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/triphouse/static/css/main.da8986fb.css",
+    "main.js": "/triphouse/static/js/main.19242314.js",
+    "static/js/787.6b55c0e0.chunk.js": "/triphouse/static/js/787.6b55c0e0.chunk.js",
+    "static/media/bg-homepage.jpg": "/triphouse/static/media/bg-homepage.e34c0cfc8b62bd0b57ab.jpg",
+    "static/media/icon-app-store.svg": "/triphouse/static/media/icon-app-store.0a6568e6d51a2500d54907e6d9081196.svg",
+    "static/media/icon-logotype.svg": "/triphouse/static/media/icon-logotype.db736812bc9aa76b842a3b7ff966e988.svg",
+    "static/media/icon-google-play.svg": "/triphouse/static/media/icon-google-play.12fe2e0c6a73923f455f8112031048f7.svg",
+    "index.html": "/triphouse/index.html",
+    "static/media/icon-search.svg": "/triphouse/static/media/icon-search.176292c55c41a523568d3e414cc46695.svg",
+    "static/media/icon-night.svg": "/triphouse/static/media/icon-night.85a1ed3dc45d6cdd3096a3a5b158ca72.svg",
+    "static/media/icon-close.svg": "/triphouse/static/media/icon-close.feee3f988ee52cf056afad28deab8406.svg",
+    "static/media/icon-sign-in.svg": "/triphouse/static/media/icon-sign-in.3b1351d5874339d0ea9ab23b95f7ec54.svg",
+    "static/media/icon-increment.svg": "/triphouse/static/media/icon-increment.6f44ba8c80d2b4f92b462dd1c665954e.svg",
+    "static/media/icon-increment-disabled.svg": "/triphouse/static/media/icon-increment-disabled.e0a6fc27dd66565552a58ae19596661d.svg",
+    "static/media/icon-decrement-disabled.svg": "/triphouse/static/media/icon-decrement-disabled.b71574e8196edae10d3fa4823b05e10b.svg",
+    "static/media/icon-decrement.svg": "/triphouse/static/media/icon-decrement.338cc8dd78ff757acf93ae9b7a0c0a76.svg",
+    "static/media/icon-hamburger.svg": "/triphouse/static/media/icon-hamburger.702a4a2f89066f36a7f3dfdc1c62910c.svg",
+    "main.da8986fb.css.map": "/triphouse/static/css/main.da8986fb.css.map",
+    "main.19242314.js.map": "/triphouse/static/js/main.19242314.js.map",
+    "787.6b55c0e0.chunk.js.map": "/triphouse/static/js/787.6b55c0e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da8986fb.css",
+    "static/js/main.19242314.js"
+  ]
+}
