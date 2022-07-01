@@ -9,45 +9,41 @@ export const Hotels = styled.section`
     }
 
     & .hotels__container {
-        display: flex;
-        flex-direction: column;
         width: 100%;
         padding-bottom: 120px;
+        padding-top: 120px;
 
         @media (max-width: ${({ theme }) => theme.media.large}) {
             padding-bottom: 80px;
+            padding-top: 80px;
         }
 
         @media (max-width: ${({ theme }) => theme.media.small}) {
             padding-bottom: 40px;
+            padding-top: 40px;
         }
     }
 
     & .hotels__title {
-        margin: 100px 0;
+        margin-bottom: 100px;
         ${getFontsFragment('xxl')}
         font-weight: ${({ theme }) => theme.fontWeights.medium};
         text-align: center;
 
         @media (max-width: ${({ theme }) => theme.media.large}) {
-            margin: 65px 0;
+            margin-bottom: 65px;
             ${getFontsFragment('xl')}
         }
 
         @media (max-width: ${({ theme }) => theme.media.small}) {
-            margin: 35px 0;
+            margin-bottom: 35px;
         }
-    }
-
-    & .hotels__items {
-        display: flex;
-        gap: 16px;
-        overflow-x: hidden;
-        overflow-y: hidden;
     }
 `
 
 export const Hotel = styled.article`
+    max-width: max-content;
+
     & .hotel__image {
         max-width: 296px;
         min-width: 296px;
@@ -55,7 +51,7 @@ export const Hotel = styled.article`
         object-fit: cover;
         margin-bottom: 24px;
 
-        @media (max-width: ${({ theme }) => theme.media.medium}) {
+        @media (max-width: ${({ theme }) => theme.media.large}) {
             max-width: 220px;
             min-width: 220px;
             height: 220px;
@@ -75,7 +71,7 @@ export const Hotel = styled.article`
         color: ${({ theme }) => theme.colors.generalBlue};
         text-align: start;
 
-        @media (max-width: ${({ theme }) => theme.media.medium}) {
+        @media (max-width: ${({ theme }) => theme.media.large}) {
             margin-bottom: 12px;
             ${getFontsFragment('md')}
         }
@@ -91,7 +87,7 @@ export const Hotel = styled.article`
         color: ${({ theme }) => theme.colors.secondaryText};
         text-align: start;
 
-        @media (max-width: ${({ theme }) => theme.media.medium}) {
+        @media (max-width: ${({ theme }) => theme.media.large}) {
             margin-bottom: 0;
             ${getFontsFragment('md')}
         }

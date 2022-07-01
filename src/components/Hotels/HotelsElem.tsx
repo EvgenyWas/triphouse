@@ -1,7 +1,6 @@
 import { memo, RefObject } from 'react';
 import { THotel } from '../../types/types';
-import NotFound from '../UI/NotFound';
-import HotelCard from './HotelCard';
+import Slider from '../UI/Slider.tsx/Slider';
 import { Hotels } from './styles';
 
 type Props = {
@@ -11,16 +10,12 @@ type Props = {
 };
 
 const HotelsElem = memo(({searchRef, hotels, title}: Props) => {
+
     return (
         <Hotels className='hotels'>
             <div ref={searchRef} className='container hotels__container'>
                 <h2 className='hotels__title'>{title}</h2>
-                <div className='hotels__items'>
-                    {hotels?.length 
-                        ? hotels.map((hotel: THotel) => <HotelCard key={hotel.id} hotel={hotel}/>) 
-                        : <NotFound title='No hotels found...'/>
-                    }
-                </div>
+                <Slider hotels={hotels} />
             </div>
         </Hotels>
     );
