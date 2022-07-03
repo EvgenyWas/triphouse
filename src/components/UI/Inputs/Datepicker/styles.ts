@@ -1,7 +1,11 @@
-import styled from "styled-components";
+import styled, { DefaultTheme, FlattenInterpolation, ThemeProps } from "styled-components";
 import { getFontsFragment } from "../../../../utils/utils";
 
-export const StyledWrapper = styled.div<{border: string, child: number}>`
+export const StyledWrapper = styled.div<
+{ 
+    border: string | FlattenInterpolation<ThemeProps<DefaultTheme>>,
+    child: number
+ }>`
     flex-basis: 20%;
     max-height: 64px;
     margin: -3px 0;

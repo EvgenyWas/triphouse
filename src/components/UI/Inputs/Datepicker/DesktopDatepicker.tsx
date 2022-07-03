@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import { baseTheme } from '../../../../styles/theme';
+import { css } from 'styled-components';
 import { TDatePicker } from '../../../../types/types';
 import { getPreviousMonth } from "../../../../utils/utils";
 import MonthDate from './MonthDate';
@@ -61,7 +61,7 @@ const DesktopDatepicker = ({ startDate, endDate, handleSetDateRange, handleCalen
             dateFormat="eee d MMM"
             monthsShown={2}
             onCalendarClose={handleCalendarClose}
-            onCalendarOpen={handleCalendarOpen({borderStyle: `border: 3px solid ${baseTheme.colors.acceptYellow};`, childWrapper: 0})}
+            onCalendarOpen={handleCalendarOpen({borderStyle: css`border: 3px solid ${({ theme }: any ) => theme.colors.acceptYellow};`, childWrapper: 0})}
         />
     );
 };

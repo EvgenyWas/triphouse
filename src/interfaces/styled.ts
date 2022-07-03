@@ -1,3 +1,8 @@
+export enum ThemeEnum {
+    LIGHT = 'LIGHT',
+    DARK = 'DARK',
+};
+
 export interface ITheme {
     colors: {
         generalBlue: string,
@@ -9,8 +14,10 @@ export interface ITheme {
         darkMode3: string,
         strokeColor: string,
         textColor: string,
+        titleColor: string,
         secondaryText: string,
         bgColor: string,
+        bgColor2: string,
     }
 
     fonts: {

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import DatePicker from 'react-datepicker';
-import { baseTheme } from '../../../../styles/theme';
+import { css } from 'styled-components';
 import { TDatePicker } from '../../../../types/types';
 
 const MobileDatepicker = ({ startDate, endDate, handleSetDateRange, handleCalendarClose, handleCalendarOpen }: TDatePicker) => {
@@ -16,7 +16,7 @@ const MobileDatepicker = ({ startDate, endDate, handleSetDateRange, handleCalend
         maxDate={endDate == null ? null: endDate}
         dateFormat="eee d MMM yyyy"
         onCalendarClose={handleCalendarClose}
-        onCalendarOpen={handleCalendarOpen({borderStyle: `border: 3px solid ${baseTheme.colors.acceptBlue};`, childWrapper: 1})}
+        onCalendarOpen={handleCalendarOpen({borderStyle: `border: 3px solid ${({ theme }: any ) => theme.colors.acceptBlue};`, childWrapper: 1})}
       />
       <DatePicker
         selected={endDate}
@@ -27,7 +27,7 @@ const MobileDatepicker = ({ startDate, endDate, handleSetDateRange, handleCalend
         minDate={startDate == null ? new Date() : startDate}
         dateFormat="eee d MMM yyyy"
         onCalendarClose={handleCalendarClose}
-        onCalendarOpen={handleCalendarOpen({borderStyle: `border: 3px solid ${baseTheme.colors.acceptBlue};`, childWrapper: 2})}
+        onCalendarOpen={handleCalendarOpen({borderStyle: css`border: 3px solid ${({ theme }: any ) => theme.colors.acceptBlue};`, childWrapper: 2})}
       />
     </>
   );

@@ -5,7 +5,7 @@ export const Hotels = styled.section`
     background: ${({ theme }) => theme.colors.bgColor};
 
     & ~ & {
-        background: ${({ theme }) => theme.colors.generalWhite};
+        background: ${({ theme }) => theme.colors.bgColor2};
     }
 
     & .hotels__container {
@@ -29,6 +29,7 @@ export const Hotels = styled.section`
         ${getFontsFragment('xxl')}
         font-weight: ${({ theme }) => theme.fontWeights.medium};
         text-align: center;
+        color: ${({ theme }) => theme.colors.titleColor};
 
         @media (max-width: ${({ theme }) => theme.media.large}) {
             margin-bottom: 65px;

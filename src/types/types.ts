@@ -1,4 +1,5 @@
 import { ChangeEvent, LegacyRef, MouseEvent } from "react";
+import { DefaultTheme, FlattenInterpolation, ThemeProps } from "styled-components";
 
 export type THotel = {
     id: string,
@@ -8,10 +9,10 @@ export type THotel = {
     imageUrl: string,
 };
 
-type TStyles = {
-    borderStyle: string, 
+export type TStyles = {
+    borderStyle: string | FlattenInterpolation<ThemeProps<DefaultTheme>>, 
     childWrapper: number,
-}
+};
 
 export type TDatePicker = {
     startDate: Date | null,
@@ -19,7 +20,7 @@ export type TDatePicker = {
     handleSetDateRange: (date: Array<Date | null>) => void,
     handleCalendarClose: () => void,
     handleCalendarOpen: ({borderStyle, childWrapper}: TStyles) => () => void,
-}
+};
 
 export type TAdults = { adults: number };
 export type TChildren = { children: string[] };

@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 import Navbar from '../components/UI/Navbar/Navbar';
 import { currentHotelSelector } from '../redux/hotels/selectors';
+import { getFontsFragment } from '../utils/utils';
 
 const HotelPage = () => {
     const hotel = useSelector(currentHotelSelector);
@@ -20,9 +21,10 @@ const HotelPage = () => {
 
 const StyledContainer = styled.div`
     height: 100vh;
+    background: ${({ theme }) => theme.colors.bgColor};
 
     .nav {
-        background: ${({ theme }) => theme.colors.generalBlue};
+        background: #10367C;
     }
 
     .nav__container {
@@ -46,10 +48,39 @@ const StyledContainer = styled.div`
         align-items: center;
 
         &__image {
-            max-height: 60vh;
+            max-height: 55vh;
             width: 60%;
             object-fit: cover;
             margin-bottom: 24px;
+
+            @media (max-width: ${({ theme }) => theme.media.large}) {
+                max-height: 75vh;
+                width: 80%;
+            }
+        }
+    }
+
+    .card__title {
+        margin-bottom: 24px;
+        ${getFontsFragment('lg')}
+        color: ${({ theme }) => theme.colors.generalBlue};
+        text-align: start;
+
+        @media (max-width: ${({ theme }) => theme.media.large}) {
+            margin-bottom: 12px;
+            ${getFontsFragment('md')}
+        }
+    }
+
+    .card__subtitle {
+        margin-bottom: 24px;
+        ${getFontsFragment('lg')}
+        color: ${({ theme }) => theme.colors.secondaryText};
+        text-align: start;
+
+        @media (max-width: ${({ theme }) => theme.media.large}) {
+            margin-bottom: 0;
+            ${getFontsFragment('md')}
         }
     }
 `

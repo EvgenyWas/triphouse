@@ -19,6 +19,7 @@ export const StyledSwiper = styled(Swiper)`
         object-fit: cover;
         background-size: 100%;
         transform: translate(7%, -50%);
+        cursor: pointer;
 
         @media (max-width: ${({ theme }) => theme.media.large}) {
             top: 110px;
@@ -42,6 +43,7 @@ export const StyledSwiper = styled(Swiper)`
         object-fit: cover;
         background-size: 100%;
         transform: translate(-7%, -50%);
+        cursor: pointer;
 
         @media (max-width: ${({ theme }) => theme.media.large}) {
             top: 110px;

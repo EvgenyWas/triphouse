@@ -3,16 +3,12 @@ import "react-datepicker/dist/react-datepicker.css";
 import { useDispatch } from 'react-redux';
 import useWindowDimensions from '../../../../hooks/useWindowDimensions';
 import { actionSetDateFrom, actionSetDateTo } from '../../../../redux/searchBar/actions';
+import { TStyles } from '../../../../types/types';
 import DesktopDatepicker from './DesktopDatepicker';
 import MobileDatepicker from './MobileDatepicker';
 import { StyledWrapper } from './styles';
 
 type TRange = Array<Date | null>;
-
-type TStyles = {
-    borderStyle: string, 
-    childWrapper: number,
-}
 
 const Datepicker = () => {
     const dispatch = useDispatch();

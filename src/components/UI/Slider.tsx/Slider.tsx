@@ -25,7 +25,7 @@ const Slider = ({ hotels }: Props) => {
                 modules={[FreeMode, Navigation]}
                 >
                {hotels.map((hotel: THotel) => 
-                        <SwiperSlide>
+                        <SwiperSlide key={hotel.id}>
                             <HotelCard key={hotel.id} hotel={hotel}/>
                         </SwiperSlide>
                     ) 

@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import background from '../../assets/backgrounds/bg-homepage.jpg';
+import backgroundDark from '../../assets/backgrounds/bg-homepage-dark.jpg';
+import backgroundLight from '../../assets/backgrounds/bg-homepage-light.jpg';
+import { ThemeEnum } from "../../interfaces/styled";
 import { getFontsFragment } from "../../utils/utils";
 
-export const StyledHeader = styled.header`
+export const StyledHeader = styled.header<{ themeBg: ThemeEnum }>`
     height: 100vh;
     padding-top: 5vh;
-    background: url(${background}) no-repeat center;
+    background: url(${props => props.themeBg === ThemeEnum.LIGHT ? backgroundLight : backgroundDark}) no-repeat center;
     background-size: cover;
 
     @media (max-width: ${({ theme }) => theme.media.large}) {

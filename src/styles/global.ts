@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import { baseTheme } from "./theme";
 
 const GlobalStyles = createGlobalStyle`
     /* RESET STYLES */
@@ -120,10 +119,10 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        font-family: ${baseTheme.fonts.generalFont};
+        font-family: ${({ theme }) => theme.fonts.generalFont};
         font-style: normal;
-        font-weight: ${baseTheme.fontWeights.regular};
-        color: ${baseTheme.colors.textColor};
+        font-weight: ${({ theme }) => theme.fontWeights.regular};
+        color: ${({ theme }) => theme.colors.textColor};
     }
 
     .container {

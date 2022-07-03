@@ -1,23 +1,15 @@
+import { css } from "styled-components";
 import { TSearchBarState } from "../redux/searchBar/types";
-import { TInitialState } from "../store/types";
-import { baseTheme } from "../styles/theme";
 
 // Function to get a fonts fragment
 type TFonts = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
 
 export function getFontsFragment(size: TFonts) {
-    return `
-        font-size: ${baseTheme.fontSizes[`${size}`]};
-        line-height: ${baseTheme.lineHeights[`${size}`]};
+    return css`
+        font-size: ${({ theme }) => theme.fontSizes[`${size}`]};
+        line-height: ${({ theme }) => theme.lineHeights[`${size}`]};
     `
 };
-
-// Function for media queries
-// export function mediaMax(screen: string, content: string): string {
-//     return `@media (max-width: ${screen}) {
-//         ${content}
-//     }`
-// };
 
 // Function to get a previous month
 export const getPreviousMonth = (date: Date): Date => {
