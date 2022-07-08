@@ -6,7 +6,7 @@ export type TResponse = { data: THotel[] };
 // Types for hotels store
 export type THotelsActions = {
     type: HotelsTypesActions,
-    payload: THotel[],
+    payload: THotel[] | null | Error | THotel,
 };
 
 export type THotelsState = {

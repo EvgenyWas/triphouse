@@ -28,5 +28,5 @@ export type TSearchBarState = {
 
 export type TSearchBarActions = {
     type: SearchBarTypesActions,
-    payload: TCounterState | string | TDate | TSearchProperty,
+    payload: TCounterState | string | TDate | number | string[],
 };

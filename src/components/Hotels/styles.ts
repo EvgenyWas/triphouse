@@ -4,7 +4,7 @@ import { getFontsFragment } from "../../utils/utils";
 export const Hotels = styled.section`
     background: ${({ theme }) => theme.colors.bgColor};
 
-    & ~ & {
+    &:nth-last-of-type(1) {
         background: ${({ theme }) => theme.colors.bgColor2};
     }
 

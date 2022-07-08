@@ -9,6 +9,7 @@ export enum SearchBarTypesActions {
     ROOMS = 'ROOMS',
     ELEMS_STATES = 'ELEMS_STATES'
 };
+
 export const actionSetSearch = createAction(SearchBarTypesActions.SEARCH);
 export const actionSetDateFrom = createAction(SearchBarTypesActions.DATE_FROM);
 export const actionSetDateTo = createAction(SearchBarTypesActions.DATE_TO);

@@ -1,3 +1,4 @@
+import { THotel } from "../../types/types";
 import { HotelsTypesActions } from "./actions";
 import { THotelsActions, THotelsState } from "./types";
 
@@ -18,7 +19,7 @@ export const initialHotelsState = {
 export const hotelsReducer = (
     state: THotelsState = initialHotelsState,
     action: THotelsActions
-) => {
+): THotelsState => {
     switch (action.type) {
         case HotelsTypesActions.REQUEST_POPULAR_HOTELS:
             return { 
@@ -27,11 +28,11 @@ export const hotelsReducer = (
         case HotelsTypesActions.REQUEST_POPULAR_HOTELS_SUCCEED:
             return { 
                 ...state, 
-                popularHotels: {...state.popularHotels, hotels: action.payload, isLoading: false} };
+                popularHotels: {...state.popularHotels, hotels: action.payload as THotel[], isLoading: false} };
         case HotelsTypesActions.REQUEST_POPULAR_HOTELS_FAILED:
             return { 
                 ...state, 
-                popularHotels: {...state.popularHotels, error: action.payload, isLoading: false} };
+                popularHotels: {...state.popularHotels, error: action.payload as null | Error, isLoading: false} };
         case HotelsTypesActions.REQUEST_AVAILABLE_HOTELS:
             return { 
                 ...state,
@@ -39,15 +40,15 @@ export const hotelsReducer = (
         case HotelsTypesActions.REQUEST_AVAILABLE_HOTELS_SUCCEED:
             return { 
                 ...state, 
-                availableHotels: {...state.availableHotels, hotels: action.payload, isLoading: false} };
+                availableHotels: {...state.availableHotels, hotels: action.payload as THotel[], isLoading: false} };
         case HotelsTypesActions.REQUEST_AVAILABLE_HOTELS_FAILED:
             return { 
                 ...state, 
-                availableHotels: {...state.availableHotels, error: action.payload, isLoading: false} };
+                availableHotels: {...state.availableHotels, error: action.payload as null | Error, isLoading: false} };
         case HotelsTypesActions.CURRENT_HOTEL:
             return { 
                 ...state, 
-                currentHotel: action.payload };
+                currentHotel: action.payload as THotel };
         default:
             return state;
     }
