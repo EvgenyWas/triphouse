@@ -12,12 +12,13 @@ export const useRequestHotels = () => {
         if (availableHotels === null) {
             dispatch(actionGetAvailableHotelsRequested());
         };
+    }, [dispatch, availableHotels]);
 
+    useEffect(() => {
         if (popularHotels === null) {
             dispatch(actionGetPopularHotelsRequested());
         };
-
-    }, [dispatch, availableHotels, popularHotels])
+    }, [dispatch, popularHotels]);
 
     return { availableHotels, popularHotels };
 }

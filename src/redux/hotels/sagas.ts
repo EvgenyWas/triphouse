@@ -25,7 +25,6 @@ function* availableHotelsWorker() {
 function* popularHotelsWorker() {    
     try {
         const response: TResponse = yield ApiService.getPopularHotels();
-        yield console.log(response);
         
         yield put(actionGetPopularHotelsSucceed(response.data));
     } catch (error: any) {
