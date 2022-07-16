@@ -5,7 +5,7 @@ import logger from 'redux-logger';
 import { initialState } from "./initialState";
 import { reducer } from "./rootReducer";
 import { rootSaga } from "./rootSaga";
-import { TEnhancers, TInitialState } from "./types";
+import { TEnhancers } from "./types";
 
 const sagaMiddleware = createSagaMiddleware();
 const enhancers: TEnhancers = [sagaMiddleware, logger];
