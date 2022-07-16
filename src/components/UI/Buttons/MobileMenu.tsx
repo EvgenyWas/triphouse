@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import styled from 'styled-components';
-import iconClose from '../../../assets/icons/icon-close.svg';
-import iconHamburger from '../../../assets/icons/icon-hamburger.svg';
+import iconClose from '../../../assets/icons/navbar/icon-close.svg';
+import iconHamburger from '../../../assets/icons/navbar/icon-hamburger.svg';
 
 type Props = {
     isClick: boolean,

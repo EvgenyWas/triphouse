@@ -1,9 +1,8 @@
 import { memo } from 'react';
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import iconThemeDark from '../../../assets/icons/icon-theme-dark.svg';
-import iconThemeLight from '../../../assets/icons/icon-theme-light.svg';
-import iconSignIn from '../../../assets/icons/icon-sign-in.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import iconThemeDark from '../../../assets/icons/navbar/icon-theme-dark.svg';
+import iconThemeLight from '../../../assets/icons/navbar/icon-theme-light.svg';
+import iconSignIn from '../../../assets/icons/navbar/icon-sign-in.svg';
 import { ThemeEnum } from '../../../interfaces/styled';
 import { actionSwitchDarkTheme, actionSwitchLightTheme } from '../../../redux/theme/actions';
 import { themeSelector } from '../../../redux/theme/selectors';
@@ -17,7 +16,7 @@ const Navtools = () => {
         isLightTheme ?
         dispatch(actionSwitchDarkTheme())
         : dispatch(actionSwitchLightTheme())
-    }
+    };
 
     return (
         <div className='nav__tools'>

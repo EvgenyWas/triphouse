@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import iconDecrementDisabled from '../../../assets/icons/icon-decrement-disabled.svg';
-import iconDecrement from '../../../assets/icons/icon-decrement.svg';
-import iconIncrementDisabled from '../../../assets/icons/icon-increment-disabled.svg';
-import iconIncrement from '../../../assets/icons/icon-increment.svg';
+import iconDecrementDisabled from '../../../assets/icons/counter/icon-decrement-disabled.svg';
+import iconDecrement from '../../../assets/icons/counter/icon-decrement.svg';
+import iconIncrementDisabled from '../../../assets/icons/counter/icon-increment-disabled.svg';
+import iconIncrement from '../../../assets/icons/counter/icon-increment.svg';
 
 type Props = {
     operation: 'decrease' | 'increase',

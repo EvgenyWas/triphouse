@@ -1,7 +1,7 @@
 import React, { memo, MouseEventHandler, useRef, useState } from 'react';
 import Navmenu from './Navmenu';
 import { StyledNav } from './styles';
-import iconLogotype from '../../../assets/icons/icon-logotype.svg';
+import iconLogotype from '../../../assets/icons/navbar/icon-logotype.svg';
 import Navtools from './Navtools';
 import MobileMenu from '../Buttons/MobileMenu';
 import { Link } from 'react-router-dom';

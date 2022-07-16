@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { getFontsFragment } from "../../../../utils/utils";
-import iconSearch from '../../../../assets/icons/icon-search.svg';
+import iconSearch from '../../../../assets/icons/search/icon-search.svg';
 
 export const StyledContainer = styled.div`
     flex-basis: 30%;

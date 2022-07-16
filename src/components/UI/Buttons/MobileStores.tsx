@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import styled from 'styled-components';
-import appStore from '../../../assets/icons/icon-app-store.svg';
-import googlePlay from '../../../assets/icons/icon-google-play.svg';
+import appStore from '../../../assets/icons/apps/icon-app-store.svg';
+import googlePlay from '../../../assets/icons/apps/icon-google-play.svg';
 
 const MobileStores = () => {
     return (
