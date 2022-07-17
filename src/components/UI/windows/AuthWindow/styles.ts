@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { getFontsFragment } from "../../../../utils/utils";
 
-export const StyledAuthWindow = styled.div`
+export const StyledAuthWindow = styled.div<{validation: boolean}>`
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -45,9 +46,34 @@ export const StyledAuthWindow = styled.div`
         border: 2px solid #CECECE;
         border-radius: 8px;
 
+        &--validation {
+            position: relative;
+            border: 2px solid ${(props) => props.validation ? '#CECECE' : '#B22222'};
+
+            
+        }
+
         @media (max-width: ${({ theme }) => theme.media.medium}) {
             height: 33px;
             margin-bottom: 12px;
+            ${getFontsFragment('xs')}
+        }
+    }
+
+    &::after {
+        ${props => props.validation &&
+            'display: none;'
+        }
+        content: 'Your email is not valid...';
+        position: absolute;
+        top: 176px;
+        left: 40px;
+        ${getFontsFragment('sm')}
+        color: #B22222;
+
+        @media (max-width: ${({ theme }) => theme.media.medium}) {
+            top: 126px;
+            left: 20px;
             ${getFontsFragment('xs')}
         }
     }
