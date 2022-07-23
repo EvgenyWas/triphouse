@@ -52,6 +52,7 @@ export const StyledNav = styled.nav<{isMenuClick: boolean}>`
     }
 
     & .nav__tools {
+        position: relative;
         display: flex;
         justify-content: end;
         gap: 24px;
@@ -73,6 +74,8 @@ export const StyledNav = styled.nav<{isMenuClick: boolean}>`
     }
 
     & .nav__login {
+        cursor: pointer;
+
         @media (max-width: ${({ theme }) => theme.media.large}) {
             width: 32px;
         }

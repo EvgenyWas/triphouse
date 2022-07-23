@@ -1,4 +1,4 @@
-import { LegacyRef, RefObject, useEffect } from "react";
+import { RefObject, useEffect } from "react";
 
 type TUseOnClickOutside = {
     (

@@ -7,7 +7,9 @@ export const StyledAuthWindow = styled.div<{validation: boolean}>`
     flex-direction: column;
     width: 400px;
     padding: 36px 40px;
+    margin: 0 auto;
     border: 1px solid #CECECE;
+    background: ${({ theme }) => theme.colors.generalWhite};
 
     @media (max-width: ${({ theme }) => theme.media.medium}) {
         width: 80%;
@@ -46,11 +48,13 @@ export const StyledAuthWindow = styled.div<{validation: boolean}>`
         border: 2px solid #CECECE;
         border-radius: 8px;
 
+        &:focus {
+            box-shadow: 4px 4px 7px 0px rgba(34, 60, 80, 0.2);
+        }
+
         &--validation {
             position: relative;
             border: 2px solid ${(props) => props.validation ? '#CECECE' : '#B22222'};
-
-            
         }
 
         @media (max-width: ${({ theme }) => theme.media.medium}) {
@@ -61,9 +65,7 @@ export const StyledAuthWindow = styled.div<{validation: boolean}>`
     }
 
     &::after {
-        ${props => props.validation &&
-            'display: none;'
-        }
+        ${props => props.validation && 'display: none;'}
         content: 'Your email is not valid...';
         position: absolute;
         top: 176px;
@@ -80,5 +82,11 @@ export const StyledAuthWindow = styled.div<{validation: boolean}>`
 
     .auth__input ~ .auth__input {
         margin-bottom: 24px;
+    }
+
+    .auth__message {
+        margin-bottom: 20px;
+        ${getFontsFragment('sm')}
+        color: #B22222;
     }
 `
