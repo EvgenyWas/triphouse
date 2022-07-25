@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/triphouse/static/css/main.6c7a7b2c.css",
-    "main.js": "/triphouse/static/js/main.9b665e23.js",
+    "main.js": "/triphouse/static/js/main.f5226424.js",
     "static/js/787.6b55c0e0.chunk.js": "/triphouse/static/js/787.6b55c0e0.chunk.js",
     "static/media/bg-homepage-dark.jpg": "/triphouse/static/media/bg-homepage-dark.e34c0cfc8b62bd0b57ab.jpg",
     "static/media/bg-homepage-light.jpg": "/triphouse/static/media/bg-homepage-light.8ee71ac02965f10c73ca.jpg",
@@ -12,21 +12,27 @@
     "static/media/icon-next-arrow.svg": "/triphouse/static/media/icon-next-arrow.aeb8b7a0472593201bcd6eb32d8a74db.svg",
     "index.html": "/triphouse/index.html",
     "static/media/icon-search.svg": "/triphouse/static/media/icon-search.176292c55c41a523568d3e414cc46695.svg",
+    "static/media/offer-real-reviews.svg": "/triphouse/static/media/offer-real-reviews.5bd43c714439bda01b4d56644bef8a94.svg",
+    "static/media/offer-support.svg": "/triphouse/static/media/offer-support.4ec704ca2f1bba6f53f8075f2a98adeb.svg",
     "static/media/icon-theme-dark.svg": "/triphouse/static/media/icon-theme-dark.85a1ed3dc45d6cdd3096a3a5b158ca72.svg",
     "static/media/icon-close.svg": "/triphouse/static/media/icon-close.feee3f988ee52cf056afad28deab8406.svg",
+    "static/media/offer-book-online.svg": "/triphouse/static/media/offer-book-online.391fc8494645c1f70abe134e17ded0ba.svg",
+    "static/media/offer-communicate.svg": "/triphouse/static/media/offer-communicate.f090b0651185c59a17d095a4754f5e05.svg",
     "static/media/icon-theme-light.svg": "/triphouse/static/media/icon-theme-light.0fa0f7c50824d6c631750b43305af33a.svg",
+    "static/media/icon-auth.svg": "/triphouse/static/media/icon-auth.ea63b4650cfd2eb0b3044fcbe1630090.svg",
     "static/media/icon-sign-in.svg": "/triphouse/static/media/icon-sign-in.3b1351d5874339d0ea9ab23b95f7ec54.svg",
     "static/media/icon-increment.svg": "/triphouse/static/media/icon-increment.6f44ba8c80d2b4f92b462dd1c665954e.svg",
     "static/media/icon-increment-disabled.svg": "/triphouse/static/media/icon-increment-disabled.e0a6fc27dd66565552a58ae19596661d.svg",
     "static/media/icon-decrement-disabled.svg": "/triphouse/static/media/icon-decrement-disabled.b71574e8196edae10d3fa4823b05e10b.svg",
     "static/media/icon-decrement.svg": "/triphouse/static/media/icon-decrement.338cc8dd78ff757acf93ae9b7a0c0a76.svg",
+    "static/media/icon-sign-out.svg": "/triphouse/static/media/icon-sign-out.c21d5a929c4acc4889eaf3c0c6023c53.svg",
     "static/media/icon-hamburger.svg": "/triphouse/static/media/icon-hamburger.702a4a2f89066f36a7f3dfdc1c62910c.svg",
     "main.6c7a7b2c.css.map": "/triphouse/static/css/main.6c7a7b2c.css.map",
-    "main.9b665e23.js.map": "/triphouse/static/js/main.9b665e23.js.map",
+    "main.f5226424.js.map": "/triphouse/static/js/main.f5226424.js.map",
     "787.6b55c0e0.chunk.js.map": "/triphouse/static/js/787.6b55c0e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6c7a7b2c.css",
-    "static/js/main.9b665e23.js"
+    "static/js/main.f5226424.js"
   ]
 }
