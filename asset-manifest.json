@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/triphouse/static/css/main.6c7a7b2c.css",
-    "main.js": "/triphouse/static/js/main.1ad16c3c.js",
+    "main.js": "/triphouse/static/js/main.6f28a378.js",
     "static/media/bg-homepage-dark.jpg": "/triphouse/static/media/bg-homepage-dark.e34c0cfc8b62bd0b57ab.jpg",
     "static/media/bg-homepage-light.jpg": "/triphouse/static/media/bg-homepage-light.8ee71ac02965f10c73ca.jpg",
     "static/media/icon-app-store.svg": "/triphouse/static/media/icon-app-store.0a6568e6d51a2500d54907e6d9081196.svg",
@@ -27,10 +27,10 @@
     "static/media/icon-sign-out.svg": "/triphouse/static/media/icon-sign-out.c21d5a929c4acc4889eaf3c0c6023c53.svg",
     "static/media/icon-hamburger.svg": "/triphouse/static/media/icon-hamburger.702a4a2f89066f36a7f3dfdc1c62910c.svg",
     "main.6c7a7b2c.css.map": "/triphouse/static/css/main.6c7a7b2c.css.map",
-    "main.1ad16c3c.js.map": "/triphouse/static/js/main.1ad16c3c.js.map"
+    "main.6f28a378.js.map": "/triphouse/static/js/main.6f28a378.js.map"
   },
   "entrypoints": [
     "static/css/main.6c7a7b2c.css",
-    "static/js/main.1ad16c3c.js"
+    "static/js/main.6f28a378.js"
   ]
 }
