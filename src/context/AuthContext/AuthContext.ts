@@ -10,7 +10,7 @@ type TAuthContext = {
 
 const authContextInitial: TAuthContext = {
     value: {
-        isAuth: true,
+        isAuth: false,
     },
     setItem: () => {},
 };

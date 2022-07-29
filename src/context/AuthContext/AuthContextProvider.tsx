@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { useStorage } from '../../hooks/useStorage';
 import { AuthContext } from './AuthContext';
 

@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import AuthContextProvider from './context/AuthContext/AuthContextProvider';
 import { ThemeEnum } from './interfaces/styled';
 import { themeSelector } from './redux/theme/selectors';
 import AppRouter from './router/AppRouter';
@@ -15,11 +14,9 @@ function App() {
   return (
     <ThemeProvider theme={isLightTheme}>
       <GlobalStyles />
-      <AuthContextProvider>
-        <Router>
-          <AppRouter />
-        </Router>
-      </AuthContextProvider>
+      <Router>
+        <AppRouter />
+      </Router>
     </ThemeProvider>    
   );
 }

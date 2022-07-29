@@ -18,7 +18,6 @@ const SearchBar = () => {
 
     const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log('!!!');
         
         if (previousSearchValue !== searchValue) {
             dispatch(actionSetSearch(searchValue));

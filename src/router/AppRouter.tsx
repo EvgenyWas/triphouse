@@ -9,8 +9,6 @@ import RequireAuth from './RequireAuth';
 
 const AppRouter = () => {
   const { value } = useContext(AuthContext);
-  console.log(value);
-  
 
   return (
     <Routes>

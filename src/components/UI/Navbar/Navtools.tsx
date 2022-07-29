@@ -27,7 +27,7 @@ const Navtools = () => {
     };
 
     function handleToggleClick() {
-        if (!value.isAuth) {
+        if (!(value.isAuth)) {
             setIsOpen(!isOpen);
         };
     };
@@ -49,7 +49,7 @@ const Navtools = () => {
                 <img src={isLightTheme ? iconThemeDark : iconThemeLight} alt="Night theme" className='nav__check-icon'/>
             </button>
             <a className='nav__login' onClick={handleToggleClick} >
-                <img src={value.isAuth ? iconSignIn : iconAuth} alt="Sign in" className='nav__login-icon'/>
+                <img src={(value.isAuth) ? iconSignIn : iconAuth} alt="Sign in" className='nav__login-icon'/>
             </a>
             {isOpen &&
                 <SignOutWindow handleClick={handleSignOutClick} handleCloseClick={handleCloseClick} />
