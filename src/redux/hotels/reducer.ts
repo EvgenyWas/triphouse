@@ -1,6 +1,6 @@
-import { THotel } from "../../types/types";
-import { HotelsTypesActions } from "./actions";
-import { THotelsActions, THotelsState } from "./types";
+import { THotel } from '../../types/types'
+import { HotelsTypesActions } from './actions'
+import { THotelsActions, THotelsState } from './types'
 
 export const initialHotelsState = {
     popularHotels: {
@@ -14,7 +14,7 @@ export const initialHotelsState = {
         error: null,
     },
     currentHotel: null,
-};
+}
 
 export const hotelsReducer = (
     state: THotelsState = initialHotelsState,
@@ -22,34 +22,57 @@ export const hotelsReducer = (
 ): THotelsState => {
     switch (action.type) {
         case HotelsTypesActions.REQUEST_POPULAR_HOTELS:
-            return { 
-                ...state, 
-                popularHotels: {...state.popularHotels, isLoading: true} };
-        case HotelsTypesActions.REQUEST_POPULAR_HOTELS_SUCCEED:
-            return { 
-                ...state, 
-                popularHotels: {...state.popularHotels, hotels: action.payload as THotel[], isLoading: false} };
-        case HotelsTypesActions.REQUEST_POPULAR_HOTELS_FAILED:
-            return { 
-                ...state, 
-                popularHotels: {...state.popularHotels, error: action.payload as null | Error, isLoading: false} };
-        case HotelsTypesActions.REQUEST_AVAILABLE_HOTELS:
-            return { 
+            return {
                 ...state,
-                availableHotels: {...state.availableHotels, isLoading: true} };
+                popularHotels: { ...state.popularHotels, isLoading: true },
+            }
+        case HotelsTypesActions.REQUEST_POPULAR_HOTELS_SUCCEED:
+            return {
+                ...state,
+                popularHotels: {
+                    ...state.popularHotels,
+                    hotels: action.payload as THotel[],
+                    isLoading: false,
+                },
+            }
+        case HotelsTypesActions.REQUEST_POPULAR_HOTELS_FAILED:
+            return {
+                ...state,
+                popularHotels: {
+                    ...state.popularHotels,
+                    error: action.payload as null | Error,
+                    isLoading: false,
+                },
+            }
+        case HotelsTypesActions.REQUEST_AVAILABLE_HOTELS:
+            return {
+                ...state,
+                availableHotels: { ...state.availableHotels, isLoading: true },
+            }
         case HotelsTypesActions.REQUEST_AVAILABLE_HOTELS_SUCCEED:
-            return { 
-                ...state, 
-                availableHotels: {...state.availableHotels, hotels: action.payload as THotel[], isLoading: false} };
+            return {
+                ...state,
+                availableHotels: {
+                    ...state.availableHotels,
+                    hotels: action.payload as THotel[],
+                    isLoading: false,
+                },
+            }
         case HotelsTypesActions.REQUEST_AVAILABLE_HOTELS_FAILED:
-            return { 
-                ...state, 
-                availableHotels: {...state.availableHotels, error: action.payload as null | Error, isLoading: false} };
+            return {
+                ...state,
+                availableHotels: {
+                    ...state.availableHotels,
+                    error: action.payload as null | Error,
+                    isLoading: false,
+                },
+            }
         case HotelsTypesActions.CURRENT_HOTEL:
-            return { 
-                ...state, 
-                currentHotel: action.payload as THotel };
+            return {
+                ...state,
+                currentHotel: action.payload as THotel,
+            }
         default:
-            return state;
+            return state
     }
 }

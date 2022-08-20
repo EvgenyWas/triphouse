@@ -1,14 +1,6 @@
 export const config = {
-    buttons: {
-
-    },
-    inputs: {
-
-    },
-    heading: {
-
-    },
-    labels: {
-
-    },
-};
+    buttons: {},
+    inputs: {},
+    heading: {},
+    labels: {},
+}

@@ -1,13 +1,16 @@
-import styled from 'styled-components';
-import { getFontsFragment } from '../../../utils/utils';
+import styled from 'styled-components'
+import { getFontsFragment } from '../../../utils/utils'
 
-export const StyledContainer = styled.div<{isOpen: boolean}>`
+export const StyledContainer = styled.div<{ isOpen: boolean }>`
     position: relative;
     max-width: 600px;
     margin: -3px 0;
     border-radius: 8px;
     border: 3px solid ${({ theme }) => theme.colors.generalWhite};
-    ${props => props.isOpen ? ({ theme}) => `border: 3px solid ${theme.colors.acceptYellow};` : ''}
+    ${(props) =>
+        props.isOpen
+            ? ({ theme }) => `border: 3px solid ${theme.colors.acceptYellow};`
+            : ''}
 
     @media (max-width: ${({ theme }) => theme.media.medium}) {
         max-width: 100%;
@@ -23,7 +26,7 @@ export const StyledCounter = styled.div`
     cursor: pointer;
 
     @media (max-width: ${({ theme }) => theme.media.large}) {
-        padding:  18px 10px 18px 12px;
+        padding: 18px 10px 18px 12px;
     }
 
     @media (max-width: ${({ theme }) => theme.media.medium}) {
@@ -39,7 +42,7 @@ export const StyledCounter = styled.div`
     }
 
     & div:not(:last-child):after {
-        content: "";
+        content: '';
         position: absolute;
         top: 19%;
         right: 0;

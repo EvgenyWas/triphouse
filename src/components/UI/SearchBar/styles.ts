@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { getFontsFragment } from '../../../utils/utils';
+import styled from 'styled-components'
+import { getFontsFragment } from '../../../utils/utils'
 
 export const StyledForm = styled.form`
     display: flex;

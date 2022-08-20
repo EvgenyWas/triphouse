@@ -1,4 +1,4 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom'
 
 type Props = {
     children: JSX.Element
@@ -7,10 +7,10 @@ type Props = {
 
 const RequireAuth = ({ children, isAuth }: Props) => {
     if (!isAuth) {
-        return <Navigate to='/hotels' replace/>        
+        return <Navigate to="/hotels" replace />
     }
 
-    return children;
-};
+    return children
+}
 
-export default RequireAuth;
+export default RequireAuth

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { getFontsFragment } from "../../utils/utils";
+import styled from 'styled-components'
+import { getFontsFragment } from '../../utils/utils'
 
 export const StyledOffers = styled.section<{ themeState: boolean }>`
     padding-top: 120px;
@@ -87,9 +87,9 @@ export const StyledOffers = styled.section<{ themeState: boolean }>`
         & > img {
             width: 100px;
             height: 100px;
-            ${props => !props.themeState && 
-                'filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(296deg) brightness(106%) contrast(101%);'
-            }
+            ${(props) =>
+                !props.themeState &&
+                'filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(296deg) brightness(106%) contrast(101%);'}
 
             @media (max-width: ${({ theme }) => theme.media.large}) {
                 width: 85px;
@@ -104,7 +104,7 @@ export const StyledOffers = styled.section<{ themeState: boolean }>`
 
         & > h4 {
             ${getFontsFragment('lg')};
-            ${props => !props.themeState && 'color: #FFFFFF;'}
+            ${(props) => !props.themeState && 'color: #FFFFFF;'}
 
             @media (max-width: ${({ theme }) => theme.media.small}) {
                 ${getFontsFragment('md')};

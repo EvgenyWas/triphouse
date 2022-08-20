@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { getFontsFragment } from "../../../../utils/utils";
+import styled from 'styled-components'
+import { getFontsFragment } from '../../../../utils/utils'
 
-export const StyledAuthWindow = styled.div<{validation: boolean}>`
+export const StyledAuthWindow = styled.div<{ validation: boolean }>`
     position: relative;
     display: flex;
     flex-direction: column;
     width: 400px;
     padding: 36px 40px;
     margin: 0 auto;
-    border: 1px solid #CECECE;
+    border: 1px solid #cecece;
     background: ${({ theme }) => theme.colors.generalWhite};
 
     @media (max-width: ${({ theme }) => theme.media.medium}) {
@@ -19,7 +19,7 @@ export const StyledAuthWindow = styled.div<{validation: boolean}>`
     .auth__title {
         margin-bottom: 40px;
         ${getFontsFragment('lg')}
-        font-weight: ${({theme }) => theme.fontWeights.medium};
+        font-weight: ${({ theme }) => theme.fontWeights.medium};
         text-align: center;
 
         @media (max-width: ${({ theme }) => theme.media.medium}) {
@@ -54,7 +54,8 @@ export const StyledAuthWindow = styled.div<{validation: boolean}>`
 
         &--validation {
             position: relative;
-            border: 2px solid ${(props) => props.validation ? '#CECECE' : '#B22222'};
+            border: 2px solid
+                ${(props) => (props.validation ? '#CECECE' : '#B22222')};
         }
 
         @media (max-width: ${({ theme }) => theme.media.medium}) {
@@ -65,7 +66,7 @@ export const StyledAuthWindow = styled.div<{validation: boolean}>`
     }
 
     &::after {
-        ${props => props.validation && 'display: none;'}
+        ${(props) => props.validation && 'display: none;'}
         content: 'Your email is not valid...';
         position: absolute;
         top: 176px;

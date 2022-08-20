@@ -1,5 +1,5 @@
-import { DefaultTheme } from "styled-components";
-import { ThemeEnum } from "../interfaces/styled";
+import { DefaultTheme } from 'styled-components'
+import { ThemeEnum } from '../interfaces/styled'
 
 export const lightTheme: DefaultTheme = {
     type: ThemeEnum.LIGHT,
@@ -21,7 +21,8 @@ export const lightTheme: DefaultTheme = {
     },
 
     fonts: {
-        generalFont: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+        generalFont:
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     },
 
     fontSizes: {
@@ -50,10 +51,10 @@ export const lightTheme: DefaultTheme = {
     media: {
         extraLarge: '1200px',
         large: '992px',
-        medium: '768px', 
+        medium: '768px',
         small: '576px',
     },
-};
+}
 
 export const darkTheme: DefaultTheme = {
     type: ThemeEnum.DARK,
@@ -75,7 +76,8 @@ export const darkTheme: DefaultTheme = {
     },
 
     fonts: {
-        generalFont: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+        generalFont:
+            "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
     },
 
     fontSizes: {
@@ -104,10 +106,10 @@ export const darkTheme: DefaultTheme = {
     media: {
         extraLarge: '1200px',
         large: '992px',
-        medium: '768px', 
+        medium: '768px',
         small: '576px',
     },
-};
+}
 
 // Original
 // colors: {

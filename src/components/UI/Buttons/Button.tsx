@@ -1,19 +1,19 @@
-import React, { memo, MouseEvent } from 'react';
-import styled from 'styled-components';
-import { getFontsFragment } from '../../../utils/utils';
+import React, { memo, MouseEvent } from 'react'
+import styled from 'styled-components'
+import { getFontsFragment } from '../../../utils/utils'
 
 type TForButton = {
-    children: string,
-    onClick?: (event: MouseEvent<HTMLButtonElement>) => void,
+    children: string
+    onClick?: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
-const Button: React.FC<TForButton> = ({children, onClick}) => {
+const Button: React.FC<TForButton> = ({ children, onClick }) => {
     return (
-        <ButtonStyled className='button' onClick={onClick}>
+        <ButtonStyled className="button" onClick={onClick}>
             {children}
         </ButtonStyled>
-    );
-};
+    )
+}
 
 const ButtonStyled = styled.button`
     width: 190px;
@@ -38,4 +38,4 @@ const ButtonStyled = styled.button`
     }
 `
 
-export default memo(Button);
+export default memo(Button)

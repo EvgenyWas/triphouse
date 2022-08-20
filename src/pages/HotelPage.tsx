@@ -1,30 +1,34 @@
-import { useSelector } from 'react-redux';
-import styled from 'styled-components';
-import Navbar from '../components/UI/Navbar/Navbar';
-import { currentHotelSelector } from '../redux/hotels/selectors';
-import { getFontsFragment } from '../utils/utils';
+import { useSelector } from 'react-redux'
+import styled from 'styled-components'
+import Navbar from '../components/UI/Navbar/Navbar'
+import { currentHotelSelector } from '../redux/hotels/selectors'
+import { getFontsFragment } from '../utils/utils'
 
 const HotelPage = () => {
-    const hotel = useSelector(currentHotelSelector);
+    const hotel = useSelector(currentHotelSelector)
 
     return (
         <StyledContainer>
             <Navbar />
             <div className="container card">
-                <img src={hotel?.imageUrl} alt="Hotel" className='card__image'/>
-                <h2 className='card__title'>{hotel?.name}</h2>
-                <p className='card__subtitle'>{`${hotel?.city}, ${hotel?.country}`}</p>
+                <img
+                    src={hotel?.imageUrl}
+                    alt="Hotel"
+                    className="card__image"
+                />
+                <h2 className="card__title">{hotel?.name}</h2>
+                <p className="card__subtitle">{`${hotel?.city}, ${hotel?.country}`}</p>
             </div>
         </StyledContainer>
-    );
-};
+    )
+}
 
 const StyledContainer = styled.div`
     height: 100vh;
     background: ${({ theme }) => theme.colors.bgColor};
 
     .nav {
-        background: #10367C;
+        background: #10367c;
     }
 
     .nav__container {
@@ -85,4 +89,4 @@ const StyledContainer = styled.div`
     }
 `
 
-export default HotelPage;
+export default HotelPage

@@ -1,9 +1,9 @@
-import { memo } from 'react';
+import { memo } from 'react'
 
 type Props = {
-    adults: number,
-    children: number,
-    rooms: number,
+    adults: number
+    children: number
+    rooms: number
 }
 
 const MobileSearchCounterWindow = ({ adults, children, rooms }: Props) => {
@@ -22,7 +22,7 @@ const MobileSearchCounterWindow = ({ adults, children, rooms }: Props) => {
                 <p>{rooms}</p>
             </div>
         </>
-    );
-};
+    )
+}
 
-export default memo(MobileSearchCounterWindow);
+export default memo(MobileSearchCounterWindow)

@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-export const StyledNav = styled.nav<{isMenuClick: boolean}>`
-    & .nav__container{
+export const StyledNav = styled.nav<{ isMenuClick: boolean }>`
+    & .nav__container {
         display: flex;
         gap: 48px;
         margin-bottom: 20vh;
@@ -17,7 +17,7 @@ export const StyledNav = styled.nav<{isMenuClick: boolean}>`
         }
     }
 
-    & .nav__logo{
+    & .nav__logo {
         width: 205px;
 
         @media (max-width: ${({ theme }) => theme.media.large}) {
@@ -29,7 +29,7 @@ export const StyledNav = styled.nav<{isMenuClick: boolean}>`
         }
     }
 
-    & .nav__menu{
+    & .nav__menu {
         flex-grow: 1;
         display: flex;
         justify-content: end;
@@ -47,7 +47,7 @@ export const StyledNav = styled.nav<{isMenuClick: boolean}>`
             background: ${({ theme }) => theme.colors.generalWhite};
             transform: translateX(100%);
             transition: transform 500ms ease-in-out;
-            ${props => props.isMenuClick  ? 'transform: translateX(0);' : ''}
+            ${(props) => (props.isMenuClick ? 'transform: translateX(0);' : '')}
         }
     }
 
@@ -108,7 +108,7 @@ export const StyledMenu = styled.div`
         background-color: transparent;
 
         @media (max-width: ${({ theme }) => theme.media.small}) {
-            color: ${({ theme }) => theme.colors.textColor}
+            color: ${({ theme }) => theme.colors.textColor};
         }
     }
 

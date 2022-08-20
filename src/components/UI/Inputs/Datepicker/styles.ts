@@ -1,11 +1,14 @@
-import styled, { DefaultTheme, FlattenInterpolation, ThemeProps } from "styled-components";
-import { getFontsFragment } from "../../../../utils/utils";
+import styled, {
+    DefaultTheme,
+    FlattenInterpolation,
+    ThemeProps,
+} from 'styled-components'
+import { getFontsFragment } from '../../../../utils/utils'
 
-export const StyledWrapper = styled.div<
-{ 
-    border: string | FlattenInterpolation<ThemeProps<DefaultTheme>>,
+export const StyledWrapper = styled.div<{
+    border: string | FlattenInterpolation<ThemeProps<DefaultTheme>>
     child: number
- }>`
+}>`
     flex-basis: 20%;
     max-height: 64px;
     margin: -3px 0;
@@ -21,11 +24,11 @@ export const StyledWrapper = styled.div<
             left: 16px;
             width: 200px;
             ${getFontsFragment('xs')}
-            color: ${({ theme }) => theme.colors.textColor};     
+            color: ${({ theme }) => theme.colors.textColor};
         }
-    
+
         & .react-datepicker-wrapper ~ .react-datepicker-wrapper::before {
-            content: 'Check-out date';    
+            content: 'Check-out date';
         }
 
         & .react-datepicker-wrapper:nth-child(1) {
@@ -33,7 +36,7 @@ export const StyledWrapper = styled.div<
         }
     }
 
-    &::after{
+    &::after {
         content: 'Check-in – Check-out';
         position: relative;
         bottom: 110px;
@@ -55,10 +58,10 @@ export const StyledWrapper = styled.div<
 
     & .react-datepicker-wrapper {
         height: 100%;
-        border: 1px solid #CECECE;
+        border: 1px solid #cecece;
         border-radius: 8px;
         background: ${({ theme }) => theme.colors.generalWhite};
-        ${props => props.border}
+        ${(props) => props.border}
 
         @media (max-width: ${({ theme }) => theme.media.medium}) {
             height: 48px;
@@ -66,11 +69,11 @@ export const StyledWrapper = styled.div<
             border-radius: 4px;
         }
     }
-    
-    & .react-datepicker-wrapper:nth-child(${props => props.child}) {
-        ${props => props.border}
+
+    & .react-datepicker-wrapper:nth-child(${(props) => props.child}) {
+        ${(props) => props.border}
     }
-    
+
     & .react-datepicker__input-container {
         display: flex;
         align-items: center;
@@ -91,11 +94,11 @@ export const StyledWrapper = styled.div<
             padding-left: 16px;
             margin-top: -44px;
             padding-top: 17px;
-            font-weight: ${({ theme }) => theme.fontWeights.medium}
+            font-weight: ${({ theme }) => theme.fontWeights.medium};
         }
     }
 
-    input::-webkit-input-placeholder { 
+    input::-webkit-input-placeholder {
         ${getFontsFragment('md')}
         color: ${({ theme }) => theme.colors.textColor};
         text-align: center;
@@ -114,7 +117,7 @@ export const StyledWrapper = styled.div<
         border: none;
     }
 
-    & .react-datepicker__header, 
+    & .react-datepicker__header,
     .react-datepicker__header--custom {
         background: ${({ theme }) => theme.colors.generalWhite};
         border-bottom: none;
@@ -150,10 +153,10 @@ export const StyledWrapper = styled.div<
         border-radius: 0;
     }
 
-    & .react-datepicker__day--range-end, 
+    & .react-datepicker__day--range-end,
     .react-datepicker__day--selecting-range-start {
         color: ${({ theme }) => theme.colors.generalWhite};
-        background: ${({ theme }) => theme.colors.acceptBlue} ;
+        background: ${({ theme }) => theme.colors.acceptBlue};
     }
 
     & .react-datepicker__day--keyboard-selected {

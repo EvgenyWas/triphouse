@@ -1,24 +1,24 @@
-import { THotel } from "../../types/types";
-import { HotelsTypesActions } from "./actions";
+import { THotel } from '../../types/types'
+import { HotelsTypesActions } from './actions'
 
-export type TResponse = { data: THotel[] };
+export type TResponse = { data: THotel[] }
 
 // Types for hotels store
 export type THotelsActions = {
-    type: HotelsTypesActions,
-    payload: THotel[] | null | Error | THotel,
-};
+    type: HotelsTypesActions
+    payload: THotel[] | null | Error | THotel
+}
 
 export type THotelsState = {
     popularHotels: {
-        hotels: THotel[] | null,
-        isLoading: boolean,
-        error: null | Error,
-    },
+        hotels: THotel[] | null
+        isLoading: boolean
+        error: null | Error
+    }
     availableHotels: {
-        hotels: THotel[] | null,
-        isLoading: boolean,
-        error: null | Error,
-    },
-    currentHotel: THotel | null,
+        hotels: THotel[] | null
+        isLoading: boolean
+        error: null | Error
+    }
+    currentHotel: THotel | null
 }

@@ -1,38 +1,42 @@
-import { css } from "styled-components";
-import { TSearchBarState } from "../redux/searchBar/types";
+import { css } from 'styled-components'
+import { TSearchBarState } from '../redux/searchBar/types'
 
 // Function to get a fonts fragment
-type TFonts = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+type TFonts = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
 
 export function getFontsFragment(size: TFonts) {
     return css`
         font-size: ${({ theme }) => theme.fontSizes[`${size}`]};
         line-height: ${({ theme }) => theme.lineHeights[`${size}`]};
     `
-};
+}
 
 // Function to get a previous month
 export const getPreviousMonth = (date: Date): Date => {
-    const previousMonth = new Date(date.getTime());
+    const previousMonth = new Date(date.getTime())
 
-    previousMonth.setMonth(date.getMonth() - 1);
-    return previousMonth;
-};
+    previousMonth.setMonth(date.getMonth() - 1)
+    return previousMonth
+}
 
 // Function to get window dimensions
 export function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
+    const { innerWidth: width, innerHeight: height } = window
 
-    return { width, height };
-};
+    return { width, height }
+}
 
 // Function to get a string with a capital letter
 export function getCapitalLetter(str: string) {
-    return str.slice(0, 1).toUpperCase() + str.slice(1);
+    return str.slice(0, 1).toUpperCase() + str.slice(1)
 }
 
 // Function to get a comparison for counter
-export function getComparisonCounter(category: 'adults' | 'children' | 'rooms', route: 'increase' | 'decrease', count: number | string[]) {
+export function getComparisonCounter(
+    category: 'adults' | 'children' | 'rooms',
+    route: 'increase' | 'decrease',
+    count: number | string[]
+) {
     const condition = {
         increase: {
             adults: count < 30,
@@ -43,15 +47,19 @@ export function getComparisonCounter(category: 'adults' | 'children' | 'rooms', 
             adults: count > 0,
             children: Array.isArray(count) && count.length > 0,
             rooms: count > 1,
-        }
+        },
     }
 
-    return condition[route][category];
-};
+    return condition[route][category]
+}
 
 // Function for build object for requests params
-export function convertToParamsObject({ search, dateRange, counter: { properties } }: TSearchBarState) {
-    const childrenToString = properties.children.join();
+export function convertToParamsObject({
+    search,
+    dateRange,
+    counter: { properties },
+}: TSearchBarState) {
+    const childrenToString = properties.children.join()
 
     return {
         search: search,
@@ -61,13 +69,13 @@ export function convertToParamsObject({ search, dateRange, counter: { properties
         children: childrenToString,
         rooms: properties.rooms,
     }
-};
+}
 
 // Function for validate email
 export const validateEmail = (email: string) => {
     return String(email)
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
-};
+        .toLowerCase()
+        .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        )
+}

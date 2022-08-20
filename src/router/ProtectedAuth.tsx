@@ -1,4 +1,4 @@
-import { Navigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom'
 
 type Props = {
     children: JSX.Element
@@ -7,10 +7,10 @@ type Props = {
 
 const ProtectedAuth = ({ children, isAuth }: Props) => {
     if (isAuth) {
-        return <Navigate to='/signin' replace/>
+        return <Navigate to="/signin" replace />
     }
 
-    return children;
-};
+    return children
+}
 
-export default ProtectedAuth;
+export default ProtectedAuth

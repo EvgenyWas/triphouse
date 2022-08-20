@@ -1,18 +1,18 @@
-import React from 'react';
-import styled from 'styled-components';
-import { getFontsFragment } from '../../utils/utils';
+import React from 'react'
+import styled from 'styled-components'
+import { getFontsFragment } from '../../utils/utils'
 
 type Props = {
-    title: string,
+    title: string
 }
 
-const NotFound = ({title}: Props) => {
+const NotFound = ({ title }: Props) => {
     return (
         <StyledNotFound>
-            <h1>{ title }</h1>
+            <h1>{title}</h1>
         </StyledNotFound>
-    );
-};
+    )
+}
 
 const StyledNotFound = styled.div`
     width: 100%;
@@ -23,4 +23,4 @@ const StyledNotFound = styled.div`
     }
 `
 
-export default NotFound;
+export default NotFound

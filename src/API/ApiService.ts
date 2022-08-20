@@ -1,19 +1,20 @@
-import axios from "axios";
-import { TAvailableHotelsParams } from "../types/types";
+import axios from 'axios'
+import { TAvailableHotelsParams } from '../types/types'
 
 export default class ApiService {
-    static urlPopularHotels = 'https://fe-student-api.herokuapp.com/api/hotels/popular';
-    static urlHotels = 'https://fe-student-api.herokuapp.com/api/hotels';
+    static urlPopularHotels =
+        'https://fe-student-api.herokuapp.com/api/hotels/popular'
+    static urlHotels = 'https://fe-student-api.herokuapp.com/api/hotels'
 
     static async getPopularHotels() {
         try {
-            const response = await axios.get(this.urlPopularHotels);
+            const response = await axios.get(this.urlPopularHotels)
 
-            return response;
+            return response
         } catch (error) {
-            throw new Error('Unable to get a token.');
+            throw new Error('Unable to get a token.')
         }
-    };
+    }
 
     static async getAvailableHotels(params?: TAvailableHotelsParams) {
         try {
@@ -25,22 +26,22 @@ export default class ApiService {
                     adults: params?.adults,
                     children: params?.children,
                     rooms: params?.rooms,
-                }
-            });
+                },
+            })
 
-            return response;
+            return response
         } catch (error) {
-            throw new Error('Unable to get a token.');
+            throw new Error('Unable to get a token.')
         }
-    };
+    }
 
     static async getHotelById(id: string = '') {
         try {
-            const response = await axios.get(`${this.urlHotels}/${id}`);
+            const response = await axios.get(`${this.urlHotels}/${id}`)
 
-            return response;
+            return response
         } catch (error) {
-            throw new Error('Unable to get a token.');
+            throw new Error('Unable to get a token.')
         }
-    };
+    }
 }

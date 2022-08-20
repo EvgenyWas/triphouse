@@ -1,33 +1,37 @@
-import { useState } from "react";
-import { TStorage } from "../types/types";
+import { useState } from 'react'
+import { TStorage } from '../types/types'
 
-export const useStorage = (key: string, initialValue: TStorage, storage = localStorage) => {
+export const useStorage = (
+    key: string,
+    initialValue: TStorage,
+    storage = localStorage
+) => {
     const [value, setValue] = useState(() => {
         try {
-            const value = storage.getItem(key) as string;
-            return JSON.parse(value);
+            const value = storage.getItem(key) as string
+            return JSON.parse(value)
         } catch (error) {
-            return initialValue;
-        };
-    });
+            return initialValue
+        }
+    })
 
     function setItem(item: TStorage) {
         try {
-            const valueStorage = JSON.stringify(item);
-            setValue(item);
-            storage.setItem(key, valueStorage);
+            const valueStorage = JSON.stringify(item)
+            setValue(item)
+            storage.setItem(key, valueStorage)
         } catch (error) {
-            setValue(initialValue);
+            setValue(initialValue)
         }
-    };
+    }
 
     function removeItem() {
         try {
-            storage.removeItem(key);
+            storage.removeItem(key)
         } catch (error) {
-            setValue('');
+            setValue('')
         }
-    };
+    }
 
-    return { value, setItem, removeItem };
-};
+    return { value, setItem, removeItem }
+}
